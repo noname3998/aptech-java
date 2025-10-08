@@ -3,7 +3,7 @@ package day3;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Ex4 {
+public class Ex44 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("nhap so sinh vien:");
@@ -21,7 +21,7 @@ public class Ex4 {
         }
 
         for (int i = 0; i < a.length; i++) {
-            System.out.printf("sinh vien %s - " + "diem tb %.2f - " + "hoc luc %s\n", a[i], b[i], HocLuc(b[i]));
+            System.out.printf("sinh vien %s - " + "diem tb %.2f - " + "hoc luc %s\n", a[i], b[i], hocLuc(b[i]));
         }
 
         System.out.println("\nSap xep danh sach sv theo thu tu diem tang dan:");
@@ -38,7 +38,7 @@ public class Ex4 {
         }
     }
 
-    public static String HocLuc(float a) {
+    public static String hocLuc(float a) {
         if (a < 5) {
             return "yeu";
         } else if (a >= 5 && a < 6.5) {

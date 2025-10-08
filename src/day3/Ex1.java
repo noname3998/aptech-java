@@ -7,11 +7,11 @@ public class Ex1 {
         Scanner sc = new Scanner(System.in);
         System.out.println("nhap so can kiem tra:");
         int a = sc.nextInt();
-        IsPrime(a);
+        isPrime(a);
 
     }
 
-    public static void IsPrime(int a) {
+    public static void isPrime(int a) {
         int check = 0;
         if (a < 2) {
             System.out.println("chi nhap so >= 2");
