@@ -70,16 +70,22 @@ public class Main {
                         Vehicle.findVehicleNumber(vehicleNumber);
                         break;
                     case 3:
-                        Vehicle.displayVehicles();
+                        sc.nextLine();
+                        System.out.println("nhap cmnd cua chu xe: ");
+                        String IdNumber = sc.nextLine();
+                        Vehicle.findOwnerIdNumber(IdNumber);
                         break;
                     case 4:
-
+                        System.out.println("nhap hang san xuat cua san pham can xoa thong tin: ");
+                        String manufacturer = sc.nextLine();
+                        Vehicle.deleteManufaturer(manufacturer);
+                        System.out.println("Xoa thanh cong");
                         break;
                     case 5:
-
                         break;
                     case 6:
-
+                        Vehicle.sortVehicleNumber();
+                        System.out.println("Sap xep giam dan theo Vehicle Number thanh cong");
                         break;
                     case 7:
 

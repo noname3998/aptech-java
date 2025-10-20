@@ -128,4 +128,30 @@ public class Vehicle {
         }
     }
 
+    public static void findOwnerIdNumber(String IdNumber) {
+        for (Vehicle vehicle : vehicles) {
+            if (vehicle.getOwner().getIdNumber() == IdNumber) {
+                if (vehicle instanceof Car) {
+                    System.out.println(((Car) vehicle).toString());
+                } else if (vehicle instanceof Motorbike) {
+                    System.out.println(((Motorbike) vehicle).toString());
+                } else {
+                    System.out.println(((Truck) vehicle).toString());
+                }
+                break;
+            }
+        }
+    }
+
+    public static void deleteManufaturer(String manufacturer) {
+        vehicles.removeIf(v -> v.manufacturer.equalsIgnoreCase(manufacturer));
+    }
+
+    public static void sortVehicleNumber() {
+        vehicles.sort((v1, v2) -> v2.getVehicleNumber() - v1.getVehicleNumber());
+    }
+
+    public static void maxOfManufaturer() {
+
+    }
 }
