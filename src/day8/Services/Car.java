@@ -40,8 +40,7 @@ public class Car extends Vehicle {
         System.out.println("nhap kieu dong co:");
         engine = sc.nextLine();
 
-        vehicles.add(new Car(getVehicleNumber(), getManufacturer(), getYearOfManufacturer(), getVehicleColor(),
-                amountOfSeat, engine));
+        vehicles.add(this);
     }
 
     @Override

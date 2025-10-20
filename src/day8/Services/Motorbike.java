@@ -27,8 +27,7 @@ public class Motorbike extends Vehicle {
         System.out.println("nhap cong suat:");
         capicity = sc.nextLine();
 
-        vehicles.add(new Motorbike(getVehicleNumber(), getManufacturer(), getYearOfManufacturer(), getVehicleColor(),
-                capicity));
+        vehicles.add(this);
     }
 
     @Override

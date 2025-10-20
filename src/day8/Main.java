@@ -63,14 +63,14 @@ public class Main {
                                 }
                             }
                         }
-                        System.out.println("chi nhap car/truck/motorbike thoi");
-
                         break;
                     case 2:
-                        Vehicle.displayVehicles();
+                        System.out.println("nhap so xe: ");
+                        int vehicleNumber = sc.nextInt();
+                        Vehicle.findVehicleNumber(vehicleNumber);
                         break;
                     case 3:
-
+                        Vehicle.displayVehicles();
                         break;
                     case 4:
 

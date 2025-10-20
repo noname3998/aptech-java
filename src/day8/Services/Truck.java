@@ -26,12 +26,12 @@ public class Truck extends Vehicle {
         System.out.println("nhap tai trong:");
         payload = sc.nextLine();
 
-        vehicles.add(
-                new Truck(getVehicleNumber(), getManufacturer(), getYearOfManufacturer(), getVehicleColor(), payload));
+        vehicles.add(this);
     }
 
     @Override
     public String toString() {
         return super.toString() + " | Tai trong: " + payload;
     }
+
 }

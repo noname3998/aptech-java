@@ -96,7 +96,13 @@ public class Vehicle {
 
     public static void displayVehicles() {
         for (Vehicle vehicle : vehicles) {
-            System.out.println(vehicle.toString());
+            if (vehicle instanceof Car) {
+                System.out.println(((Car) vehicle).toString());
+            } else if (vehicle instanceof Motorbike) {
+                System.out.println(((Motorbike) vehicle).toString());
+            } else {
+                System.out.println(((Truck) vehicle).toString());
+            }
         }
     }
 
@@ -105,6 +111,21 @@ public class Vehicle {
         return "So xe: " + vehicleNumber + " | Hang san xuat: " + manufacturer + " | Nam san xuat: "
                 + yearOfManufacturer
                 + " | Mau xe: " + vehicleColor + " | Ten chu so huu: " + owner.getName();
+    }
+
+    public static void findVehicleNumber(int vehicleNumber) {
+        for (Vehicle vehicle : vehicles) {
+            if (vehicle.getVehicleNumber() == vehicleNumber) {
+                if (vehicle instanceof Car) {
+                    System.out.println(((Car) vehicle).toString());
+                } else if (vehicle instanceof Motorbike) {
+                    System.out.println(((Motorbike) vehicle).toString());
+                } else {
+                    System.out.println(((Truck) vehicle).toString());
+                }
+                break;
+            }
+        }
     }
 
 }
