@@ -82,6 +82,7 @@ public class Main {
                         System.out.println("Xoa thanh cong");
                         break;
                     case 5:
+
                         break;
                     case 6:
                         Vehicle.sortVehicleNumber();
