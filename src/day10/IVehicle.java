@@ -1,7 +1,7 @@
 package day10;
 
 public interface IVehicle {
-    public void input();
+    void input();
 
-    public void display();
+    void display();
 }

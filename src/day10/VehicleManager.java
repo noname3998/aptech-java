@@ -9,28 +9,31 @@ public class VehicleManager {
     public List<Motorbike> bikes = new ArrayList<>();
     protected Scanner sc = new Scanner(System.in);
 
-    public void inputCars(List<Car> cars) {
+    public void inputCars() {
 
         System.out.println("nhap so luong xe: ");
         int count = sc.nextInt();
+        sc.nextLine();
         for (int i = 0; i < count; i++) {
             System.out.println("xe thu " + i);
-            cars.get(i).input();
+            Car car = new Car();
+            cars.add(car);
         }
     }
 
-    public void inputBikes(List<Motorbike> bikes) {
+    public void inputBikes() {
 
         System.out.println("nhap so luong xe: ");
         int count = sc.nextInt();
         for (int i = 0; i < count; i++) {
             System.out.println("xe thu " + i);
-            bikes.get(i).input();
+            Motorbike bike = new Motorbike();
+            bikes.add(bike);
         }
     }
 
     public void displayCarsSortedByPriceDesc() {
-        cars.sort((v1, v2) -> Double.compare(v1.getPrice(), v2.getPrice()));
+        cars.sort((v1, v2) -> Double.compare(v2.getPrice(), v1.getPrice()));
         for (int i = 0; i < cars.size(); i++) {
             System.out.println("--- thong tin xe thu " + i + " la ---");
             cars.get(i).display();
@@ -39,8 +42,8 @@ public class VehicleManager {
 
     public void filterBikesByEngineType(String engineType) {
         for (int i = 0; i < bikes.size(); i++) {
-            if (bikes.get(i).getEngineType() == engineType) {
-
+            if (engineType != null && bikes.get(i).getEngineType().equals(engineType)) {
+                System.out.println(bikes.get(i));
             }
         }
     }

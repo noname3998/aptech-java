@@ -54,7 +54,7 @@ public class Motorbike extends Vehicle {
     @Override
     public void display() {
 
-        System.out.println(this.toString());
+        System.out.println(this);
     }
 
     @Override

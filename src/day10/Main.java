@@ -25,7 +25,7 @@ public class Main {
             System.out.println("5. Exit");
             System.out.println("nhap lua chon:");
             choice = sc.nextInt();
-
+            sc.nextLine();
             switch (choice) {
                 case 1:
                     manager.inputCars(cars);
