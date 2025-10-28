@@ -137,12 +137,12 @@ public class LiteraryWork implements ILiteraryWork {
     }
 
     private int readInt(String prompt, String errorMessage, int min, int max) {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         while (true) {
             System.out.print(prompt);
 
             try {
-                String input = reader.readLine().trim();
+                String input = br.readLine().trim();
                 int number = Integer.parseInt(input);
                 if (number >= min && number <= max) {
                     return number;
